@@ -23,7 +23,7 @@ h1 {
   justify-content: center;
 }
 
-.container-login {
+.container-form {
   width: 20rem;
   align-items: center;
   border: 1px solid whitesmoke;
@@ -33,6 +33,7 @@ h1 {
 
 h2 {
   margin-top: 20px;
+  margin-bottom: 10px;
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 20px;
@@ -42,7 +43,7 @@ h2 {
   width: 80%;
   padding: 5px 0px;
   margin-left: 10%;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 15px;
   border-top-style: hidden;
   border-right-style: hidden;
@@ -70,7 +71,8 @@ h2 {
 }
 
 button {
-  margin-top: 5px;
+  margin-top: 10px;
+  margin-bottom: 15px;
   padding: 5px 15px;
   text-align: center;
   justify-content: center;
@@ -89,7 +91,7 @@ button:hover {
 
 #cadastro {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 15px;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
@@ -99,4 +101,88 @@ button:hover {
   h1 {
     text-align: center;
   }
+}
+
+footer {
+  padding-top: 10px;
+  text-align: center;
+  color: darkgrey;
+  font-size: small;
+}
+
+
+/* Navegação HTML */
+
+.center-nav {
+  display: flex;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-nav {
+  width: 20rem;
+  margin: 15px;
+  align-items: center;
+  border: 1px solid whitesmoke;
+  border-radius: 20px 20px;
+  box-shadow: 5px 10px 18px grey;
+}
+
+.button-paciente {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  justify-content: center;
+  transition-duration: 0.4s;
+  background-color: white;
+  color: grey;
+  border: 0.5px solid grey;
+  border-radius: 10px 10px;
+  cursor: pointer;
+}
+
+.button-paciente:hover {
+  background-color: #6599dd;
+  color: white;
+}
+
+.button-atendimento {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  justify-content: center;
+  transition-duration: 0.4s;
+  background-color: white;
+  color: grey;
+  border: 0.5px solid grey;
+  border-radius: 10px 10px;
+  cursor: pointer;
+}
+
+.button-atendimento:hover {
+  background-color: #f19f5c;
+  color: white;
+}
+
+
+/* Cadastro HTML */
+
+#nome, #email, #senha, #apresentacao {
+  width: 80%;
+  padding: 5px 0px;
+  margin-left: 10%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #eee;
+}
+
+textarea {
+  resize: none
 }

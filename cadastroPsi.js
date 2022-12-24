@@ -1,41 +1,34 @@
-const form = document.querySelector("form");
-const button  = document.querySelector("#button");
+const form = document.getElementById("form");
 
-button.addEventListener("click",cadastroPsi )
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-async function cadastroPsi(formData) {
+  const nome = document.getElementById("nome").value;
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+  const apresentacao = document.getElementById("apresentacao").value;
+
+  const formData = {
+    nome,
+    email,
+    senha,
+    apresentacao,
+  };
+
+  async function cadastrarPsi() {
     try {
-
-        const res = await fetch("http://localhost:3000/psicologos",
-            {
-                method: "POST",
-                body: JSON.stringify(formData),
-                headers: {
-                    "Access-Control-Allow-Origin": "*",
-                    "Content-Type": "application/json"
-                }
-            });
-        const event = await res.json()
-        return event;
+      const response = await fetch("http://localhost:3000/psicologos", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const event = await response.json();
+      return event;
     } catch (error) {
-        console.log(error)
+      console.log(error);
     }
-}
-
-form.addEventListener("submit", event => {
-    event.preventDefault();
-
-    const nome = event.target.nome.value;
-    const email = event.target.email.value;
-    const senha = event.target.senha.value;
-    const apresentacao = event.target.apresentacao.value;
-    // console.log( nome, email, senha, apresentacao)
-
-    const formData = {
-        nome,
-        email,
-        senha,
-        apresentacao
-    };
-})
-
+  }
+  return cadastrarPsi();
+});
